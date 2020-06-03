@@ -1,12 +1,8 @@
-import datetime 
-
 from django.db import models
-from django.utils import timezone
 
-
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+class Peliculas(models.Model):
+    duracion = models.CharField(max_length=200)
+    titulo = models.CharField(max_length = 200)
     def __str__(self):
         return self.question_text
     def was_published_recently(self):
